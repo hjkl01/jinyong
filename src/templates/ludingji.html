@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ title }}</title>
+
+    <meta name="description" content="">
+    <meta name="generator" content="GitBook 2.2.0">
+
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"></link>
+
+    <link rel="next" href="https://github.com/killmymates/">
+
+</head>
+
+<body>
+
+    <div class="book without-animation with-summary font-size-2 font-family-1 color-theme-1" data-level="8" data-basepath="."
+        data-revision="Sat Apr 22 2017 23:10:28 GMT+0800 (CST)">
+
+        <div class="book-summary">
+            <div class="book-search">
+                <input type="text" placeholder="Type to search" class="form-control">
+            </div>
+            <ul class="summary">
+                <h1 style="text-align:center">{{ head }}</h1>
+                {% for title in titles %}
+                <li class="chapter" data-level="1" data-path="1-introduction.html">
+                    <a href="/ludingji/{{ loop.index }}">
+                        <i class="fa fa-check"></i>
+
+                        <b>{{ title }}</b>
+                    </a>
+
+                </li>
+                {% endfor %}
+
+
+            </ul>
+        </div>
+
+        <div class="book-body">
+            <div class="body-inner">
+                <div class="book-header">
+
+                    <div id="font-settings-wrapper" class="dropdown pull-left">
+
+                        <div class="dropdown-menu font-settings">
+                            <div class="dropdown-caret">
+                                <span class="caret-outer"></span>
+                                <span class="caret-inner"></span>
+                            </div>
+
+                            <div class="buttons">
+                                <button type="button" id="reduce-font-size" class="button size-2">A</button>
+                                <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+                            </div>
+
+                            <div class="buttons font-family-list">
+                                <button type="button" data-font="0" class="button">Serif</button>
+                                <button type="button" data-font="1" class="button">Sans</button>
+                            </div>
+
+                            <div class="buttons color-theme-list">
+                                <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+                                <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+                                <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Actions Right -->
+
+                    <div class="dropdown pull-right">
+                        <a href="https://github.com/killmymates/" class="btn toggle-dropdown" aria-label="Share">
+                            <svg height="52" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                                />
+                            </svg>
+                        </a>
+                        </a>
+                        <div class="dropdown-menu font-settings dropdown-left">
+                            <div class="dropdown-caret">
+                                <span class="caret-outer"></span>
+                                <span class="caret-inner"></span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <!-- Title -->
+                    <h1>
+                        <i class="fa fa-circle-o-notch fa-spin"></i>
+                    </h1>
+                </div>
+
+                <div class="page-wrapper" tabindex="-1">
+                    <div class="page-inner">
+
+                        <section class="normal" id="section-">
+
+
+                            <h2>{{ title }}</h2>
+
+                            <div>
+                                {% for c in content %}
+                                <p id="section">
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ c }}
+                                </p>
+                                {% endfor %}
+                            </div>
+
+                    </div>
+                </div>
+
+                <script>
+                    require(["gitbook"], function (gitbook) {
+                        var config = {
+                            "fontSettings": {
+                                "theme": "sepia",
+                                "family": "sans",
+                                "size": 2
+                            }
+                        };
+                        gitbook.start(config);
+                    });
+                </script>
+
+</body>
+
+</html>

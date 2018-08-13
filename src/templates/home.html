@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head style="background-color:rgba(255,255,0,0.25)">
+  <title>littletool.top</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="../bootstrap.css">
+
+</head>
+
+<body>
+  <h2 class="text-center jumbotron font-weight-bold">
+    Welcome to My Flask Project
+  </h2>
+
+  <div class="container">
+    <ul class="nav nav-tabs justify-content-center">
+      <li class="nav-item">
+        <a class="nav-link active" href="https://littletool.top/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../ludingji/">鹿鼎记</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="http://github.com/killmymates/">Github</a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    (function () {
+      var OriginTitile = document.title,
+        titleTime;
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+          document.title = '死鬼去哪里了！';
+          clearTimeout(titleTime);
+        } else {
+          document.title = '(つェ⊂)咦!又好了!';
+          titleTime = setTimeout(function () {
+            document.title = OriginTitile;
+          }, 2000);
+        }
+      });
+    })();
+  </script>
+
+
+</body>
+
+</html>

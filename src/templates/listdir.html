@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+
+    <title>home</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/grids-responsive-min.css">
+    <link rel="stylesheet" href="http://picturebag.qiniudn.com/blog.css">
+    <link rel="stylesheet" href="http://picturebag.qiniudn.com/monokai.css">
+</head>
+
+<body bgcolor="#d0d0d0">
+    <div id="layout" class="pure-g">
+        <div class="sidebar pure-u-1 pure-u-md-1-4">
+            <div class="header">
+                <li class="nav-item">
+                    <a class="button-success pure-button" href="/">主页</a>
+                </li>
+                <h1 class="brand-title">
+                    <a href="./">movies</a>
+                </h1>
+                <nav class="nav">
+                    <ul class="nav-list">
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+        <div class="content pure-u-1 pure-u-md-3-4">
+            <div>
+                {% for d in data %}
+                <h3>
+                    <a href="../v/{{ d }}">{{ d }}</a>
+                </h3>
+                {% endfor %}
+
+                <div class="footer">
+                    <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                        <ul>
+                            <li>
+                                <a href="http://utellme.win">About Me</a>
+                            </li>
+                            <li>
+                                <a href="http://github.com/Uriboykaa/">GitHub</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
