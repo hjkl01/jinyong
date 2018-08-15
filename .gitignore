@@ -90,9 +90,9 @@ logs/
 .idea/*
 .DS_Store
 .vscode
-#settings.yaml
+settings.yaml
 tmp/*
-*.sqlite
+#*.sqlite
 result/*
 tasks/result/*
 *.swp
