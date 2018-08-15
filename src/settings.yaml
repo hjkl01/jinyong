@@ -1,0 +1,15 @@
+User-Agent : Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36
+cookie : 
+time_sleep : 2
+
+database : xxxdb
+host : '127.0.0.1'
+user : xxx
+password : xxx
+
+redis_ip: '127.0.0.1'
+redis_port: 6379
+redis_pass: ''
+redis_db: 1
+
+queue_timeout: 5
