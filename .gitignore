@@ -90,7 +90,7 @@ logs/
 .idea/*
 .DS_Store
 .vscode
-#settings.yaml
+settings.yaml
 tmp/*
 *.sqlite
 result/*
