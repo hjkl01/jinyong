@@ -3,7 +3,6 @@
 
 import os
 from flask import Flask, render_template, jsonify, send_from_directory
-from common.google import googleproxy
 from common.model import Jinyong as jy
 from common.dumblog import dlog
 logger = dlog(__file__)
@@ -43,10 +42,9 @@ def favicon(_file):
     return send_from_directory(os.path.join(app.root_path, 'static'), _file)
 
 
-@app.route('/google/<path:word>')
-def google(word='python'):
-    url = 'https://www.google.com.hk/search?hl=en&q=%s' % word
-    return googleproxy(url)
+@app.route('/google')
+def google():
+    return render_template('google.html')
 
 
 @app.route('/v/')
