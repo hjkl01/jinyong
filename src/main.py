@@ -42,7 +42,7 @@ def favicon(_file):
     return send_from_directory(os.path.join(app.root_path, 'static'), _file)
 
 
-@app.route('/google')
+@app.route('/google/')
 def google():
     return render_template('google.html')
 
