@@ -1,5 +1,5 @@
 FROM python:3.6.1
-# RUN pip install --upgrade pip \
+RUN pip install --upgrade pip
 RUN pip install uwsgi
 #-i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 RUN mkdir /sockets
