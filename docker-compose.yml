@@ -8,6 +8,8 @@ services:
   server:
     build: server 
     restart: always
+    environment:
+      TZ: 'Asia/Shanghai'
     ports:
       - 80:80
     volumes:
