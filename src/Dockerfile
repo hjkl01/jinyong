@@ -10,4 +10,4 @@ ADD requirements.txt /
 RUN pip install -r /requirements.txt
 #-i http://pypi.douban.com/simple --trusted-host pypi.douban.com
 CMD /usr/local/bin/uwsgi --ini /etc/uwsgi/uwsgi.ini
-#--ini /app/uwsgi.ini
+# CMD /usr/local/bin/uwsgi --socket /sockets/uwsgi.sock --wsgi-file main.py --callable app --processes 4 --threads 2 -b 32768 

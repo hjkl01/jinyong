@@ -2,6 +2,8 @@ version: '2'
 services:
   web:
     build: src
+    environment:
+      - "TZ=Asia/Shanghai"
     volumes:
       - ./sockets:/sockets
 
@@ -9,9 +11,11 @@ services:
     build: server 
     restart: always
     environment:
-      TZ: 'Asia/Shanghai'
+      - "TZ=Asia/Shanghai"
     ports:
       - 80:80
       - 443:443
     volumes:
       - ./sockets:/sockets
+      - ./server:/cert
+      - ./video:/app/video

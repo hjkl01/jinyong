@@ -4,8 +4,8 @@
 import os
 from flask import Flask, render_template, jsonify, send_from_directory
 from common.model import Jinyong as jy
-from common.dumblog import dlog
-logger = dlog(__file__)
+from loguru import logger
+logger.add("logs/%s.log" % __file__.rstrip('.py'), format="{time:MM-DD HH:mm:ss} {level} {message}")
 app = Flask(__name__)
 
 
