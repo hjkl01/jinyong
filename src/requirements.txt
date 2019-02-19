@@ -16,3 +16,4 @@ six==1.10.0
 Werkzeug==0.12.2
 uwsgi
 certbot
+loguru
