@@ -6,6 +6,8 @@ services:
       - "TZ=Asia/Shanghai"
     volumes:
       - ./sockets:/sockets
+      - ./video:/app/video
+      - ./logs:/app/logs
 
   server:
     build: server 
@@ -18,4 +20,4 @@ services:
     volumes:
       - ./sockets:/sockets
       - ./server:/cert
-      - ./video:/app/video
+      - ./nginx_log:/var/log/nginx
