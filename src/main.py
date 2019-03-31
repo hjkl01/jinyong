@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    _str = '<html>  <meta http-equiv="refresh" content="0;url=http://www.xvim.top/home/">  </html> '
+    _str = '<html>  <meta http-equiv="refresh" content="0;url=../home/">  </html> '
     return _str
 
 
