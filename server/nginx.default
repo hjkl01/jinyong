@@ -1,24 +1,22 @@
-server {  
+server {
     listen 80;
-# listen [::]:80 ssl ipv6only=on;
-    client_max_body_size 0;
-    server_name     www.viewer.pub;   
-    return 301 https://www.viewer.pub;
-
-# location / {
-#     include uwsgi_params;
-#     uwsgi_pass 127.0.0.1:8000;
-# }
+    # listen [::]:80 ssl ipv6only=on;
+    server_name     viewer.pub;
+    location / {
+        include uwsgi_params;
+        #uwsgi_pass unix:/tmp/uwsgi.sock;
+        uwsgi_pass unix:///sockets/uwsgi.sock;
+    }
+    # return 301 https://www.viewer.pub/;
 }
-
 
 server {
     listen 443;
-    server_name www.viewer.pub viewer.pub;
+    server_name www.viewer.pub;
 
     ssl on;
-    ssl_certificate /cert/www.viewer.pub.pem;
-    ssl_certificate_key /cert/www.viewer.pub.key;
+    ssl_certificate /cert/viewer.pub.pem;
+    ssl_certificate_key /cert/viewer.pub.key;
     ssl_session_cache    shared:SSL:1m;
     ssl_session_timeout 5m;
 
@@ -26,16 +24,9 @@ server {
     ssl_ciphers ECDH:AESGCM:HIGH:!RC4:!DH:!MD5:!3DES:!aNULL:!eNULL;
     ssl_prefer_server_ciphers on;
 
-# root /var/www/html;
-# index index.html index.htm index.nginx-debian.html;
-
-# location / {
-# 	# First attempt to serve request as file, then
-# 	# as directory, then fall back to displaying a 404.
-# 	try_files $uri $uri/ =404;
-# }
     location / {
         include uwsgi_params;
-        uwsgi_pass 127.0.0.1:8000;
+        #uwsgi_pass unix:/tmp/uwsgi.sock;
+        uwsgi_pass unix:///sockets/uwsgi.sock;
     }
 }
